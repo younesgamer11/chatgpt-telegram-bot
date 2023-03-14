@@ -13,7 +13,7 @@ class OpenAIHelper:
         Initializes the OpenAI helper class with the given configuration.
         :param config: A dictionary containing the GPT configuration
         """
-        openai.api_key = config['api_key']
+        openai.api_key = config['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']
         openai.proxy = config['proxy']
         self.config = config
         self.conversations: dict[int: list] = {}  # {chat_id: history}
