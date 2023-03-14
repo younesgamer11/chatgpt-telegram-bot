@@ -18,7 +18,7 @@ def main():
     )
 
     # Check if the required environment variables are set
-    required_values = ['TELEGRAM_BOT_TOKEN', 'OPENAI_API_KEY']
+    required_values = ['6247953312:AAFV_mYUJEzr3vd5qQtRfJCkQU6g54NxmhE', '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']
     missing_values = [value for value in required_values if os.environ.get(value) is None]
     if len(missing_values) > 0:
         logging.error(f'The following environment values are missing in your .env: {", ".join(missing_values)}')
@@ -26,7 +26,7 @@ def main():
 
     # Setup configurations
     openai_config = {
-        'api_key': os.environ['OPENAI_API_KEY'],
+        'api_key': os.environ['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'],
         'show_usage': os.environ.get('SHOW_USAGE', 'false').lower() == 'true',
         'proxy': os.environ.get('PROXY', None),
         'max_history_size': int(os.environ.get('MAX_HISTORY_SIZE', 10)),
@@ -50,7 +50,7 @@ def main():
     }
 
     telegram_config = {
-        'token': os.environ['TELEGRAM_BOT_TOKEN'],
+        'token': os.environ['6247953312:AAFV_mYUJEzr3vd5qQtRfJCkQU6g54NxmhE'],
         'allowed_user_ids': os.environ.get('ALLOWED_TELEGRAM_USER_IDS', '*'),
         'proxy': os.environ.get('PROXY', None),
         'voice_reply_transcript': os.environ.get('VOICE_REPLY_WITH_TRANSCRIPT_ONLY', 'true').lower() == 'true',
